@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #262626;
 }
 
 Spline {
@@ -11,7 +12,6 @@ Spline {
 .spline {
   width: 50vw;
   height: 100vh;
-  background-color: #262626;
 }
 
 .App-header {
