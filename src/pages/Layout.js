@@ -14,6 +14,12 @@ const Layout = () => {
           </Link>
         </div>
         <div className='menu-div'>
+          {/* PROJECTS */}
+          <Link to='/projects'>
+            <Spline scene='https://prod.spline.design/f2-jwTy6jxoRJQVZ/scene.splinecode' />
+          </Link>
+        </div>
+        <div className='menu-div'>
           {/* FURNITURE */}
           <Link to='/furniture'>
             <Spline scene='https://prod.spline.design/vkRJKuCH0ID4gAGo/scene.splinecode' />
@@ -35,12 +41,6 @@ const Layout = () => {
           {/* COSTUME */}
           <Link to='/costume'>
             <Spline scene='https://prod.spline.design/Bl2JbhbaVpk28zmd/scene.splinecode' />
-          </Link>
-        </div>
-        <div className='menu-div'>
-          {/* PROJECTS */}
-          <Link to='/projects'>
-            <Spline scene='https://prod.spline.design/f2-jwTy6jxoRJQVZ/scene.splinecode' />
           </Link>
         </div>
       </div>
