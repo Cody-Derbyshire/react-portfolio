@@ -1,6 +1,7 @@
 .layout-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  max-height: 100vh;
 }
 
 canvas {
