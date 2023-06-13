@@ -1,21 +1,68 @@
+@font-face {
+  font-family: space-mono;
+  src: url(./components/fonts/space-mono/SpaceMono-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: space-mono-bold;
+  src: url(./components/fonts/space-mono/SpaceMono-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: teenage-dream;
+  src: url(./components/fonts/teenage-dream/TeenageDreamsFont-Demo-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: teenage-dream-alt1;
+  src: url(./components/fonts/teenage-dream/TeenageDreamsFont-Demo-Alternative1.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: teenage-dream-alt2;
+  src: url(./components/fonts/teenage-dream/TeenageDreamsFont-Demo-Alternative2.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: teenage-dream-bold;
+  src: url(./components/fonts/teenage-dream/TeenageDreamsFont-Demo-Bold.ttf);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #262626;
+
+  transition: all 0.2s linear;
+  font-family: space-mono;
 }
 
-.left-half {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
+.right-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
+  gap: 0.5rem;
+  padding: 2rem;
 }
-
-.spline {
-  width: 50vw;
+.contact-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.image-wrapper-furniture {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,4 +87,89 @@
 
 img {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+  box-shadow: inset 0 0 0 0 #262626;
+}
+
+.contact-div > * > .contact-a:hover {
+  box-shadow: inset 25rem 0 0 0 #262626;
+  color: white;
+}
+
+.bold-span {
+  background-color: #262626;
+  color: #fff;
+  padding: 0 0.5rem;
+}
+.designer-bold-span {
+  background-color: #262626;
+  color: #fff;
+  padding: 0 1rem;
+}
+.webdev-bold-span {
+  background-color: #262626;
+  color: #fff;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+}
+.designer-bold-span:hover {
+  background-color: #ff006e;
+}
+.webdev-bold-span:hover {
+  background-color: #ffba08;
+}
+
+.title-div h1 {
+  text-align: justify;
+}
+
+dialog.popUp[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  margin: 5rem auto;
+  max-height: 90vh;
+  border: none;
+}
+a.closebtn {
+  background-color: #262626;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+dialog.popUp[open]::backdrop {
+  backdrop-filter: blur(5px);
+}
+
+@media screen and (min-width: 40rem) {
+  .furniture-img:hover {
+    filter: blur(2px);
+    cursor: pointer;
+  }
+
+  .img-wrapper {
+    position: relative;
+  }
+  .img-wrapper:hover::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    background-color: #262626;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
 }

@@ -1,26 +1,38 @@
-import { useRef } from 'react';
 import './App.css';
 
-import Spline from '@splinetool/react-spline';
-
 const App = () => {
-  const text = useRef();
-
-  const onLoad = (spline) => {
-    console.log(spline.findObjectByName('Text'));
-    console.log(spline.findObjectById('71b6b01c-ebeb-4a22-833b-95bc50c1e036'));
-  };
-
   return (
-    <div className='left-half'>
-      <div className='spline'>
-        <Spline
-          scene='https://prod.spline.design/9415sx1lBu-BzC3E/scene.splinecode'
-          onLoad={onLoad}
-        />
+    <div className='right-half'>
+      <div className='title-div'>
+        <h1>
+          Hi, <span className='bold-span'>I'm Cody.</span>
+        </h1>
       </div>
-      <div>
-        <Spline scene='https://prod.spline.design/nYmRZvnKhKUC0i50/scene.splinecode' />
+
+      <div className='title-div'>
+        <h1>
+          I'm a <span className='designer-bold-span'>designer</span> <br />+
+          <span className='webdev-bold-span'>web developer.</span>
+        </h1>
+      </div>
+
+      <div className='contact-div'>
+        <div className='email-me'>
+          <p>
+            <strong>email me &darr;</strong>
+          </p>
+          <a className='contact-a' href='mailto:derbyshire@outlook.com'>
+            derbyshire@outlook.com
+          </a>
+        </div>
+        <div className='call-me'>
+          <strong>
+            <p>call me &darr;</p>
+          </strong>
+          <a className='contact-a' href='tel:+64220725530'>
+            0220725530
+          </a>
+        </div>
       </div>
     </div>
   );

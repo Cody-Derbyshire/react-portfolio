@@ -1,21 +1,134 @@
 .layout-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 8fr;
   max-height: 100vh;
 }
 
-canvas {
-  max-width: 100%;
-}
-
 .menu-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 100vh;
-  width: 50vw;
+  display: none;
 }
 
 .menu-div {
   display: flex;
+}
+
+.menu-div * .menu-link {
+  font-size: calc(2rem + 2vw);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  color: #262626;
+  box-shadow: inset 0 0 0 0 #262626;
+}
+
+.menu-div * .menu-link:hover,
+.menu-div * .menu-link:focus {
+  box-shadow: inset 25rem 0 0 0 #262626;
+  color: white;
+}
+.menu-div * .menu-link:hover::after,
+.menu-div * .menu-link:focus::after {
+  content: '\00A0←';
+}
+
+.mobile-menu-div {
+  background-color: #ffffff00;
+}
+.burger-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+.burger-icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.menu-button {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #fffffff0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  /* width: 15rem; */
+
+  margin: 2rem auto;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  background: none;
+  display: flex;
+  gap: 2rem;
+  transition: 0.3s;
+  color: #262626;
+  box-shadow: inset 0 0 0 0 #262626;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  box-shadow: inset 25rem 0 0 0 #262626;
+  background-color: #262626;
+  color: white;
+}
+
+.overlay a.mobile-menu-link {
+  padding-left: 3rem;
+}
+
+.overlay a.mobile-menu-link:hover::after {
+  content: '←';
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 2.8rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 35rem) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 100vh;
+  }
+
+  .menu-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+    padding: 2rem;
+  }
 }
