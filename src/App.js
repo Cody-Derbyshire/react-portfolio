@@ -1,37 +1,48 @@
+import React, { Suspense } from 'react';
 import './App.css';
+const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const App = () => {
   return (
     <div className='right-half'>
-      <div className='title-div'>
-        <h1>
-          Hi, <span className='bold-span'>I'm Cody.</span>
-        </h1>
-      </div>
-
-      <div className='title-div'>
-        <h1>
-          I'm a <span className='designer-bold-span'>designer</span> <br />+
-          <span className='webdev-bold-span'>web developer.</span>
-        </h1>
-      </div>
-
-      <div className='contact-div'>
-        <div className='email-me'>
-          <p>
-            <strong>email me &darr;</strong>
-          </p>
-          <a className='contact-a' href='mailto:derbyshire@outlook.com'>
-            derbyshire@outlook.com
-          </a>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Spline
+          className='background-video'
+          style={{ height: '100vh', width: '90vw' }}
+          scene='https://prod.spline.design/sGelq-tP7Isx277R/scene.splinecode'
+        />
+      </Suspense>
+      <div className='title-contact-wrapper'>
+        <div className='title-div'>
+          <h1 className='title-name'>
+            Hi, <span className='bold-span'>I'm Cody.</span>
+          </h1>
         </div>
-        <div className='call-me'>
-          <strong>
-            <p>call me &darr;</p>
-          </strong>
-          <a className='contact-a' href='tel:+64220725530'>
-            0220725530
-          </a>
+        <div className='title-div'>
+          <h1>
+            I'm a <span className='designer-bold-span'>designer</span>
+          </h1>
+          <h1>
+            +<span className='webdev-bold-span'>web developer.</span>
+          </h1>
+        </div>
+        <div className='contact-div'>
+          <div className='email-me'>
+            <p>
+              <strong>email me &darr;</strong>
+            </p>
+            <a className='contact-a' href='mailto:derbyshire@outlook.com'>
+              derbyshire@outlook.com
+            </a>
+          </div>
+          <div className='call-me'>
+            <strong>
+              <p>call me &darr;</p>
+            </strong>
+            <a className='contact-a' href='tel:+64220725530'>
+              0220725530
+            </a>
+          </div>
         </div>
       </div>
     </div>

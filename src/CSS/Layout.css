@@ -35,6 +35,12 @@
 .mobile-menu-div {
   background-color: #ffffff00;
 }
+
+.mobile-menu {
+  background-color: #ffffff00;
+  z-index: -10;
+}
+
 .burger-wrapper {
   display: flex;
   flex-direction: column;

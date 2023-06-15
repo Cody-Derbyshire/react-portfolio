@@ -44,13 +44,48 @@
   justify-content: center;
   height: 100vh;
   gap: 0.5rem;
-  padding: 2rem;
+
+  position: relative;
+  overflow: hidden;
 }
+.background-video {
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  filter: blur(2px);
+  width: 100%;
+}
+
+@media screen and (max-width: 25rem) {
+  div.background-video > canvas {
+    width: 50%;
+  }
+  .email-me,
+  .call-me {
+    font-size: 1rem;
+  }
+  .title-div h1.title-name {
+    font-size: 1.5rem;
+  }
+  .title-div h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.title-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto;
+
+  gap: 1rem;
+}
+
 .contact-div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 1rem;
+
   font-size: 1.5rem;
 }
 
@@ -113,7 +148,7 @@ a {
 .webdev-bold-span {
   background-color: #262626;
   color: #fff;
-  margin-left: 1rem;
+
   padding: 0 0.5rem;
 }
 .designer-bold-span:hover {
@@ -124,7 +159,12 @@ a {
 }
 
 .title-div h1 {
-  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-name {
+  font-size: 2.5rem;
 }
 
 dialog.popUp[open] {
@@ -151,7 +191,7 @@ dialog.popUp[open]::backdrop {
 }
 
 @media screen and (min-width: 40rem) {
-  .furniture-img:hover {
+  /* .furniture-img:hover {
     filter: blur(2px);
     cursor: pointer;
   }
@@ -171,5 +211,5 @@ dialog.popUp[open]::backdrop {
     color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;
-  }
+  } */
 }
