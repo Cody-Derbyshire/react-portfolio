@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useRef, useEffect, useState } from 'react';
 import '../App.css';
-/* import ConsoleLog from '../components/ConsoleLog'; */
 
 const Furniture = () => {
   const firstRef = useRef();
@@ -30,7 +29,7 @@ const Furniture = () => {
   const [refDiag4, setRefDiag4] = useState();
   const [refDiag5, setRefDiag5] = useState();
 
-  const dataHover = 'click anywhere to look closer';
+  const dataHover = 'click the image to look closer';
 
   useEffect(() => {
     setFirstRefSrc(firstRef.current.src);

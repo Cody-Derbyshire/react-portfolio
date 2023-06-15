@@ -191,7 +191,7 @@ dialog.popUp[open]::backdrop {
 }
 
 @media screen and (min-width: 40rem) {
-  /* .furniture-img:hover {
+  .furniture-img:hover {
     filter: blur(2px);
     cursor: pointer;
   }
@@ -211,5 +211,5 @@ dialog.popUp[open]::backdrop {
     color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;
-  } */
+  }
 }
