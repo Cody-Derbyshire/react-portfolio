@@ -8,7 +8,7 @@ const App = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Spline
           className='background-video'
-          style={{ height: '100vh', width: '90vw' }}
+          /* style={{ height: '100vh', width: '90vw' }} */
           scene='https://prod.spline.design/sGelq-tP7Isx277R/scene.splinecode'
         />
       </Suspense>
