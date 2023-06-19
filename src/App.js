@@ -1,16 +1,29 @@
 import React, { Suspense } from 'react';
 import './App.css';
+import { MeshGradientRenderer } from '@johnn-e/react-mesh-gradient';
+
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 const App = () => {
   return (
     <div className='right-half'>
       <Suspense fallback={<div>Loading...</div>}>
+        {/* <Spline
+          className='background-video'
+          
+          scene='https://prod.spline.design/sGelq-tP7Isx277R/scene.splinecode'
+        />  */}
         <Spline
           className='background-video'
-          /* style={{ height: '100vh', width: '90vw' }} */
-          scene='https://prod.spline.design/sGelq-tP7Isx277R/scene.splinecode'
+          scene='https://prod.spline.design/00XRakUG3bUMnWNQ/scene.splinecode'
         />
+
+        {/* <MeshGradientRenderer
+          className='background-video'
+          backgroundColor={'#F7F7F7'}
+          speed={0.01}
+          colors={['#F7F7F7', '#D0F04F', '#BEC4F4', '#F7F7F7', '#F89FF8']}
+        /> */}
       </Suspense>
       <div className='title-contact-wrapper'>
         <div className='title-div'>

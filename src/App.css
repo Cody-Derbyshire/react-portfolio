@@ -44,7 +44,7 @@
   justify-content: center;
   height: 100vh;
   gap: 0.5rem;
-
+  padding-right: 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -52,7 +52,7 @@
   z-index: -1;
   position: absolute;
   overflow: hidden;
-  filter: blur(2px);
+  filter: blur(50px);
   width: 100%;
 }
 
@@ -188,6 +188,11 @@ a.closebtn {
 
 dialog.popUp[open]::backdrop {
   backdrop-filter: blur(5px);
+}
+
+.gradient {
+  width: 100vw;
+  height: 100vw;
 }
 
 @media screen and (min-width: 40rem) {
