@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react';
+import React /* , { Suspense } */ from 'react';
 import { browserName, browserVersion } from 'react-device-detect';
 import './App.css';
 
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
+/* const Spline = React.lazy(() => import('@splinetool/react-spline')); */
 
 console.log(`${browserName} ${browserVersion}`);
 
@@ -38,7 +38,7 @@ const App = () => {
                 <p>call me &darr;</p>
               </strong>
               <a className='contact-a' href='tel:+64220725530'>
-                0220725530
+                +64220725530
               </a>
             </div>
           </div>

@@ -5,24 +5,28 @@
   height: 100vh;
   overflow: scroll;
   justify-content: center;
+  gap: 1rem;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
+  aspect-ratio: 1;
   align-items: center;
   gap: 1rem;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   padding: 1rem;
-  cursor: pointer;
+
   border-radius: 1rem;
+  max-width: 20rem;
 }
 
 .project-img {
   image-rendering: pixelated;
+  width: 80%;
 }
 
 .project-link {
