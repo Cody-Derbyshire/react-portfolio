@@ -1,0 +1,21 @@
+.animate-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.animate-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  position: relative;
+  padding: 0 2rem;
+}
+
+.animate-img {
+  width: 200px;
+  z-index: 100;
+}

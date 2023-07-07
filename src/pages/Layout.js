@@ -22,8 +22,8 @@ const Layout = () => {
           scene='https://prod.spline.design/00XRakUG3bUMnWNQ/scene.splinecode'
         />
       </Suspense>
-      <div className='layout-wrapper'>
-        <div className='menu-container'>
+      <div className='layout-wrapper' id='layout-wrapper'>
+        <div className='menu-container' id='menu-container'>
           <div className='menu-div'>
             <Link to='/'>
               <p className='menu-link'>Home</p>

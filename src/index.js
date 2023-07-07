@@ -11,6 +11,7 @@ import Motion from './pages/Motion';
 import NoPage from './pages/NoPage';
 import Projects from './pages/Projects';
 import ThreeD from './pages/ThreeD';
+import Animate from './pages/Animate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
           <Route path='motion' element={<Motion />} />
           <Route path='costume' element={<Costume />} />
           <Route path='projects' element={<Projects />} />
+          <Route path='animate' element={<Animate />} />
           <Route path='*' element={<NoPage />} />
         </Route>
       </Routes>
